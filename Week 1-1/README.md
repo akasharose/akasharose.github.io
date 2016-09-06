@@ -9,3 +9,5 @@ It took me somewhere around an hour, and the hardest part was making the ghost's
 Looking at this upcoming assignment, I MIGHT just end up popping in for help sometime later in the week...
 
 Here's to me not failing the class!
+
+#edit -- upon further investigation, I find that, although I can get the link to the sketch no issue, I can't seem to get the link to this up for the life of me. I'm posting the md file it says I'm connecting to, and ask you about it tomorrow!
