@@ -1,0 +1,5 @@
+This week's assignment was by far the most complicated, but also the most fun. I decided I wanted a for loop to take objects and move them across the screen, having them switch from circles to squares and vica versa with every click. Doing all of this was fairly simple, but then I decided I wanted to do something entertaining -- what if I could randomize the direction the objects were heading? 
+
+It became fairly difficult fairly quickly, and I quickly flew above 100 lines worth of code, forcing me to start putting if loops inside if loops inside for loops that were in if loops... which became massively difficult. Personally, I started having a lot of trouble managing the many brackets that began to consume my code, making it massively more difficult to work.
+
+I also started having a little bit of trouble when it came to keeping track of what was linking with what -- I was starting to have a lot of trouble keeping everything in the right function by miscounting the number of brackets I needed. I ended up needing Connor's help to count my brackets to make sure everything worked as it should.
