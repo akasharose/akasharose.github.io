@@ -20,14 +20,14 @@ var trueFalse = [ true , false ];
 function setup() {
   // Creates a Canvas with a random Background color
   createCanvas (800,800);
-  // Set Rectangle Mode to Center to keep Circles and Squares centers identical
-  rectMode (CENTER);
   // Initial randomization of fill colors for shapes
   fillRed = random (0, 255);
   fillGreen = random (0, 255);
   fillBlue = random (0, 255);
   // Establish randomly colored background
   background (random (256), random (256), random (256));
+  // Set Rectangle Mode to Center to keep Circles and Squares centers identical
+  rectMode (CENTER);
 }
 
 function draw() {
