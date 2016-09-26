@@ -13,7 +13,6 @@ function setup() {
 // Calls the shape drawing function, and increases the shift values
 function draw() {
   shapes();
-  w++
   w++;
   z++;
 }
