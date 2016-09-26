@@ -39,7 +39,7 @@ function shapes () {
         if (createCircles) {
           ellipse ((x * 100) + w, (y * 100) + z, 50, 50);
         } else {
-          rect ((x * 100) + w, (y * 100) + z, 50, 50);
+          rect ((x * 100) + w, (y * 100) + z, 45, 45);
         }
       // The else of the up/down check
       } else {
@@ -47,7 +47,7 @@ function shapes () {
         if (createCircles) {
           ellipse ((x * 100) + w, (y * 100) - z, 50, 50);
         } else {
-          rect ((x * 100) + w, (y * 100) - z, 50, 50);
+          rect ((x * 100) + w, (y * 100) - z, 45, 45);
         }
       }
     // The else of the right/left check
@@ -57,13 +57,13 @@ function shapes () {
         if (createCircles) {
           ellipse ((x * 100) - w, (y * 100) + z, 50, 50);
         } else {
-          rect ((x * 100) - w, (y * 100) + z, 50, 50); }
+          rect ((x * 100) - w, (y * 100) + z, 45, 45); }
       } else {
         // Object creation in the left and Up direction
         if (createCircles) {
           ellipse ((x * 100) - w, (y * 100) - z, 50, 50);
         } else {
-          rect ((x * 100) - w, (y * 100) - z, 50, 50);
+          rect ((x * 100) - w, (y * 100) - z, 45, 45);
         }
       }
       }
