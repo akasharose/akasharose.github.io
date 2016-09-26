@@ -13,8 +13,8 @@ function setup() {
 // Calls the shape drawing function, and increases the shift values
 function draw() {
   shapes();
-  w++
-  z++
+  w++;
+  z++;
 }
 // Runs the functions that change all the colors and return the shapes to their standard location
 function mousePressed () {
