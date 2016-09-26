@@ -13,6 +13,7 @@ function setup() {
 // Calls the shape drawing function, and increases the shift values
 function draw() {
   shapes();
+  w++
   w++;
   z++;
 }
@@ -31,27 +32,35 @@ function randomizeColors () {
 function shapes () {
   for (x = -1; x <= (width/100) + 1; x++) {
     for (y = -1; y <= (height/100) + 1; y++) {
+    // Checks if the object is moving right or left
     if (posX) {
+      // Checks if the object is moving up or down
       if (posY) {
+        // Object creation in the Right and Down direction
         if (createCircles) {
           ellipse ((x * 100) + w, (y * 100) + z, 50, 50);
         } else {
           rect ((x * 100) + w, (y * 100) + z, 50, 50);
         }
+      // The else of the up/down check
       } else {
+        // Object creation in the right and Up direction
         if (createCircles) {
           ellipse ((x * 100) + w, (y * 100) - z, 50, 50);
         } else {
           rect ((x * 100) + w, (y * 100) - z, 50, 50);
         }
       }
+    // The else of the right/left check
     } else {
       if (posY) {
+        // Object creation in the left and Down direction
         if (createCircles) {
           ellipse ((x * 100) - w, (y * 100) + z, 50, 50);
         } else {
           rect ((x * 100) - w, (y * 100) + z, 50, 50); }
       } else {
+        // Object creation in the left and Up direction
         if (createCircles) {
           ellipse ((x * 100) - w, (y * 100) - z, 50, 50);
         } else {
