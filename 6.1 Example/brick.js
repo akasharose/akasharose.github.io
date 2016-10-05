@@ -7,10 +7,13 @@ function Brick(xPos, yPos, w, h, color) {
   this.w = w;
   this.h = h;
   this.color = color;
+  this.visible = true;
 }
 
 Brick.prototype.draw = function() {
-  var c = color('hsl(' + this.color + ', 100%, 50%)');
-  fill(c);
-  rect(this.x, this.y, this.w, this.h);
-};
+  if (this.visible) {
+    var c = color('hsl(' + this.color + ', 100%, 50%)');
+    fill(c);
+    rect(this.x, this.y, this.w, this.h);
+  }
+}

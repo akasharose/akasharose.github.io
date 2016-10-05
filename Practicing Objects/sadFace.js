@@ -68,3 +68,8 @@ SadFace.prototype.edgeCheck = function() {
   }
 
 };
+
+SadFace.prototype.collision = function() {
+  this.dirX = -this.dirX;
+  this.dirY = -this.dirY;
+}

@@ -11,11 +11,12 @@ function setup() {
 }
 
 function draw() {
-  if (mouseX >= bricks[i].xPos && mouseX <= bricks[i].xPos + bricks[i].w &&
-  mouseY >= bricks[i].yPos && mouseY <= bricks[i].yPos + bricks[i].h) {
-    
-  }
+  background(0);
   for (var i = 0; i < bricks.length; i++) {
+    if (mouseX >= bricks[i].x && mouseX <= bricks[i].x + bricks[i].w &&
+      mouseY >= bricks[i].y && mouseY <= bricks[i].y + bricks[i].h) {
+      bricks[i].visible = false;
+    }
     bricks[i].draw();
   }
 }
