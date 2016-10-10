@@ -5,7 +5,7 @@ function setup() {
   // Define the Canvas
   createCanvas(1000, 800);
   // Create the array
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 20; i++) {
     circles[i] = (new ClickCircles(random(60, 200), 1000, 800));
   }
 }
