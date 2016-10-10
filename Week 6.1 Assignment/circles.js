@@ -31,7 +31,6 @@ ClickCircles.prototype.drawCircles = function() {
   if (this.visible) {
     ellipse(this.posX, this.posY, this.circleDiam, this.circleDiam);
   }
-  // text("Press Me!", this.posX, this.posY, this.circleDiam, this.circleDiam / 3);
   pop();
 };
 // Moves the objects
