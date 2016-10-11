@@ -26,6 +26,7 @@ function ClickCircles(diam, screenW, screenH) {
   this.visible = true;
 
   this.clicks = 0;
+  this.accurateClicks = 0;
   
 }
 // Creates the objects
@@ -87,4 +88,5 @@ ClickCircles.prototype.reset = function() {
   this.posX = random(this.screenW);
   this.posY = random(this.screenH);
   this.clicks = 0;
+  this.accurateClicks = 0;
 }
