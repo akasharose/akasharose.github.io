@@ -46,19 +46,15 @@ function pacCheck() {
       curDist = dist(curXPos, curYPos, pacPack[j].posX, pacPack[j].posY);
       if (curDist <= touchDist && pacPack[j].posX >= curXPos && curXDir === true) {
         pacPack[i].stopPlz();
-        pacPack[j].stopPlz();
       }
       if (curDist <= touchDist && pacPack[j].posX <= curXPos && curXDir === false) {
         pacPack[i].stopPlz();
-        pacPack[j].stopPlz();
       }
       if (curDist <= touchDist && pacPack[j].posY >= curYPos && curYDir === true) {
         pacPack[i].stopPlz();
-        pacPack[j].stopPlz();
       }
       if (curDist <= touchDist && pacPack[j].posY <= curYPos && curYDir === false) {
         pacPack[i].stopPlz();
-        pacPack[j].stopPlz();
       }
     }
   }
