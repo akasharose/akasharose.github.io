@@ -25,8 +25,8 @@ function PacMan(trans) {
   this.downEdge = height - this.pacDiam / 2;
   // The timer variables
   this.framePassed = 0;
-  this.maxFrameGoal = 240;
-  this.frameGoal = random(this.maxFrameGoal/2, this.maxFrameGoal);
+  this.maxFrameGoal = 360;
+  this.frameGoal = random(this.maxFrameGoal / 6, this.maxFrameGoal);
 }
 
 PacMan.prototype.drawPacman = function() {
@@ -45,18 +45,18 @@ PacMan.prototype.movePacman = function() {
 };
 
 PacMan.prototype.wallCheck = function() {
-  if (this.posX >= this.rightEdge) {
+  if (this.posX >= this.rightEdge && this.direct == 1) {
     this.stopPlz();
-    this.posX = width - this.pacDiam/2; // Makes sure things don't get caught outside the canvas
-  } else if (this.posX <= this.leftEdge) {
+    this.posX = width - this.pacDiam / 2;
+  } else if (this.posX <= this.leftEdge && this.direct == 3) {
     this.stopPlz();
-    this.posX = this.pacDiam/2;
-  } else if (this.posY >= this.downEdge) {
+    this.posX = this.pacDiam / 2;
+  } else if (this.posY >= this.downEdge && this.direct === 0) {
     this.stopPlz();
-    this.posY = height - this.pacDiam/2;
-  } else if (this.posY <= this.upEdge) {
+    this.posY = height - this.pacDiam / 2;
+  } else if (this.posY <= this.upEdge && this.direct == 2) {
     this.stopPlz();
-    this.posY = this.pacDiam/2;
+    this.posY = this.pacDiam / 2;
   }
 };
 
@@ -107,16 +107,16 @@ PacMan.prototype.pacUp = function() {
   this.pacMoveY = -random(this.pacSpeeds);
   this.pacMoveX = 0;
   this.startAngle = PI + HALF_PI + QUARTER_PI / 2;
-  this.endAngle = PI  + HALF_PI - QUARTER_PI / 2;
+  this.endAngle = PI + HALF_PI - QUARTER_PI / 2;
   this.eyeX = this.posX - this.pacDiam / 4;
-  this.eyeY = this.posY - this. pacDiam / 8;
+  this.eyeY = this.posY - this.pacDiam / 8;
 };
 
 PacMan.prototype.pacLeft = function() {
   this.pacMoveX = -random(this.pacSpeeds);
   this.pacMoveY = 0;
   this.startAngle = PI + QUARTER_PI / 2;
-  this.endAngle = PI - QUARTER_PI /2;
+  this.endAngle = PI - QUARTER_PI / 2;
   this.eyeX = this.posX - this.pacDiam / 8;
   this.eyeY = this.posY - this.pacDiam / 4;
 };
@@ -125,8 +125,8 @@ PacMan.prototype.timer = function() {
   if (this.framePassed >= this.frameGoal) {
     this.pacDirect();
     this.framePassed = 0;
-    this.frameGoal = random(this.maxFrameGoal/2, this.maxFrameGoal);
+    this.frameGoal = random(this.maxFrameGoal / 2, this.maxFrameGoal);
   } else {
     this.framePassed++;
   }
-}
+};
