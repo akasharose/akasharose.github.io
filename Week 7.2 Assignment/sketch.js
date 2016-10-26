@@ -13,8 +13,8 @@ function draw() {
   background(200);
   for (var i = 0; i < 7; i++) {
     pacPack[i].drawPacman();
-    pacPack[i].movePacman();
     pacPack[i].timer();
+    pacPack[i].movePacman();
     pacCheck();
   }
 }
@@ -44,17 +44,18 @@ function pacCheck() {
     // Compare the [i] array to the newly created [j] array
     for (var j = i + 1; j < pacPack.length; j++) {
       curDist = dist(curXPos, curYPos, pacPack[j].posX, pacPack[j].posY);
-      if (curDist <= touchDist && pacPack[j].posX >= curXPos && curXDir === true) {
+      if (curDist <= touchDist && pacPack[j].posX >= curXPos && curXDir == true) {
         pacPack[i].stopPlz();
-      }
-      if (curDist <= touchDist && pacPack[j].posX <= curXPos && curXDir === false) {
+        pacPack[j].stopPlz();
+      } else if (curDist <= touchDist && pacPack[j].posX <= curXPos && curXDir === false) {
         pacPack[i].stopPlz();
-      }
-      if (curDist <= touchDist && pacPack[j].posY >= curYPos && curYDir === true) {
+        pacPack[j].stopPlz();
+      } else if (curDist <= touchDist && pacPack[j].posY >= curYPos && curYDir == true) {
         pacPack[i].stopPlz();
-      }
-      if (curDist <= touchDist && pacPack[j].posY <= curYPos && curYDir === false) {
+        pacPack[j].stopPlz();
+      } else if (curDist <= touchDist && pacPack[j].posY <= curYPos && curYDir === false) {
         pacPack[i].stopPlz();
+        pacPack[j].stopPlz();
       }
     }
   }
