@@ -1,0 +1,210 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "Percentage of high school students who watch television for 2 hours or less per day, New Jersey: Beginning 2009 (odd years only)",
+      "attribution" : "New Jersey Deparment of Education",
+      "attributionLink" : "http://www.state.nj.us/education/students/yrbs/",
+      "averageRating" : 0,
+      "description" : "Definition:  The percentage of students who watch television or play video/computer games and use the internet for a specified number of hours per day on an average school day.\n\nData Source:  Student Health Survey, Office of Student Support Services, New Jersey Department of Education",
+      "displayType" : "table",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1456947759,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "publicationAppendEnabled" : false,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1456947200,
+      "rowsUpdatedBy" : "6pk4-pn6y",
+      "tableId" : 8587746,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : 245060852,
+        "name" : "Year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 2,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19978988,
+        "width" : 148,
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "true",
+          "align" : "right"
+        }
+      }, {
+        "id" : 245060853,
+        "name" : "Race",
+        "dataTypeName" : "text",
+        "fieldName" : "race",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19978989,
+        "width" : 148,
+        "format" : { }
+      }, {
+        "id" : 245060854,
+        "name" : "High School TV Time (2 hours max)",
+        "dataTypeName" : "percent",
+        "fieldName" : "hsstudenttvtime",
+        "position" : 4,
+        "renderTypeName" : "percent",
+        "tableColumnId" : 19978990,
+        "width" : 280,
+        "format" : {
+          "view" : "percent_bar_and_text",
+          "noCommas" : "false",
+          "precision" : "1",
+          "align" : "left"
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "jsonQuery" : {
+          "order" : [ {
+            "columnFieldName" : "hsstudenttvtime",
+            "ascending" : true
+          } ]
+        },
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        }
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : true,
+          "expression" : {
+            "columnId" : 245060854,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "sortBys" : [ {
+        "id" : 0,
+        "viewColumnId" : 245060854,
+        "flags" : [ "asc" ]
+      } ],
+      "tableAuthor" : {
+        "id" : "6pk4-pn6y",
+        "displayName" : "Loretta Kelly",
+        "roleName" : "administrator",
+        "screenName" : "Loretta Kelly",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards", "manage_provenance", "create_story", "edit_story_title_desc", "create_story_copy", "delete_story", "manage_story_collaborators", "manage_story_visibility", "manage_story_public_version", "edit_story", "view_unpublished_story", "view_story", "view_all_dataset_status_logs", "use_data_connectors" ]
+      },
+      "flags" : [ "unsaved" ]
+    }
+  },
+  "data" : [ [ 1, "5412A05A-6746-4450-AAE1-946934823DA2", 1, 1401279222, "770542", 1401279222, "770542", "{\n}", "2009", "All", "32.6" ]
+, [ 2, "5ED9627D-B0E4-43B3-B44D-F034B40EC17F", 2, 1401279222, "770542", 1401279222, "770542", "{\n}", "2009", "White", "24.9" ]
+, [ 3, "10407BA5-2AC7-4DD8-89B1-8EF1A69BF90D", 3, 1401279222, "770542", 1401279222, "770542", "{\n}", "2009", "Black", "54.4" ]
+, [ 5, "1BD2252C-E2AD-4550-A8D4-3AC734FC9714", 5, 1401279222, "770542", 1401279222, "770542", "{\n  \"invalidCells\" : {\n    \"19978990\" : \"Data are unreliable\"\n  }\n}", "2009", "Asian", null ]
+, [ 6, "9C1214CF-D3AF-430C-80ED-B907D609461F", 6, 1401279222, "770542", 1401279222, "770542", "{\n}", "2011", "All", "32.9" ]
+, [ 8, "B1C1AEFC-415F-49B9-AD86-D31FF07AC58B", 8, 1401279222, "770542", 1401279222, "770542", "{\n}", "2011", "Black", "53.4" ]
+, [ 9, "A7B59D4F-2708-49D6-8591-42E784AC5B4D", 9, 1401279222, "770542", 1401279222, "770542", "{\n}", "2011", "Hispanic", "39.4" ]
+, [ 16, "C5A67A89-4B01-4E48-8851-D1ED818F017A", 16, 1401279222, "770542", 1401279222, "770542", "{\n}", "2015", "All", null ]
+, [ 17, "EC0E9C39-B053-4420-94E3-E3692422D77A", 17, 1401279222, "770542", 1401279222, "770542", "{\n}", "2015", "White", null ]
+, [ 18, "DBCD433B-E400-4087-A7B5-4451543642C8", 18, 1401279222, "770542", 1401279222, "770542", "{\n}", "2015", "Black", null ]
+, [ 19, "065049B0-A010-40A5-814D-0AF3082EA7DC", 19, 1401279222, "770542", 1401279222, "770542", "{\n}", "2015", "Hispanic", null ]
+, [ 20, "20A67EF6-19C5-4E8F-9836-7B6A2BC69575", 20, 1401279222, "770542", 1401279222, "770542", "{\n}", "2015", "Asian", null ]
+, [ 21, "5E4E0B01-8205-4C43-B25A-B900B4E91063", 21, 1401279222, "770542", 1401279222, "770542", "{\n}", "2017", "All", null ]
+, [ 22, "D1ABB03D-A248-4190-83B8-69F7FADD7BC1", 22, 1401279222, "770542", 1401279222, "770542", "{\n}", "2017", "White", null ]
+, [ 23, "6BDE7D6C-F466-401F-8891-96BF747A1724", 23, 1401279222, "770542", 1401279222, "770542", "{\n}", "2017", "Black", null ]
+, [ 24, "D192DAA9-6F5E-4397-B3CB-8CF8392AA809", 24, 1401279222, "770542", 1401279222, "770542", "{\n}", "2017", "Hispanic", null ]
+, [ 25, "6B428226-E212-4D77-A81A-FA834618925C", 25, 1401279222, "770542", 1401279222, "770542", "{\n}", "2017", "Asian", null ]
+, [ 26, "D990CDA8-5126-413E-A23C-670925387370", 26, 1401279222, "770542", 1401279222, "770542", "{\n}", "2019", "All", null ]
+, [ 27, "B4F88468-C52E-42AC-AC12-2649FD4645B2", 27, 1401279222, "770542", 1401279222, "770542", "{\n}", "2019", "White", null ]
+, [ 28, "190BB6A8-54A7-44F1-9C63-A4C52EEA5D85", 28, 1401279222, "770542", 1401279222, "770542", "{\n}", "2019", "Black", null ]
+, [ 29, "63A1DCAA-290D-4805-9E29-B98D1FC0B5EE", 29, 1401279222, "770542", 1401279222, "770542", "{\n}", "2019", "Hispanic", null ]
+, [ 30, "82031AF1-EF91-4BA4-A447-C1E6D575B7A3", 30, 1401279222, "770542", 1401279222, "770542", "{\n}", "2019", "Asian", null ]
+, [ 31, "9282F975-CF80-47DB-8E8B-EE3E9ADB28CB", 31, 1401279222, "770542", 1401279222, "770542", "{\n}", "2020", "All", "29.3" ]
+, [ 32, "8A85B9D5-5024-485D-9B67-782DF568C919", 32, 1401279222, "770542", 1401279222, "770542", "{\n}", "2020", "White", "22.4" ]
+, [ 33, "D948357B-F323-4364-918D-78C09443A2E1", 33, 1401279222, "770542", 1401279222, "770542", "{\n}", "2020", "Black", "49" ]
+, [ 34, "4AF879A7-E6D0-45C5-99EE-85B6D4CD125C", 34, 1401279222, "770542", 1401279222, "770542", "{\n}", "2020", "Hispanic", "37.8" ]
+, [ 35, "ADEE1DF4-5B8F-4AA5-9ABE-BB84CBA698FE", 35, 1401279222, "770542", 1401279222, "770542", "{\n  \"invalidCells\" : {\n    \"19978990\" : \"Not yet available\"\n  }\n}", "2020", "Asian", null ]
+, [ 4, "58049B91-B9AB-44FC-B047-A35FA1A6730A", 4, 1401279222, "770542", 1456918232, "770542", null, "2009", "Hispanic", "41.9" ]
+, [ 7, "9A6EA331-7C41-4FBC-94F5-82C8483A25EB", 7, 1401279222, "770542", 1456918258, "770542", null, "2011", "White", "27" ]
+, [ 10, "EE5CD21B-1F1E-41BE-961E-8562A3DCE944", 10, 1401279222, "770542", 1456918313, "770542", "{}", "2011", "Asian", "21.2" ]
+, [ 11, "D799A455-FA2C-48D4-86A8-70ADDCDF2221", 11, 1401279222, "770542", 1456918337, "770542", null, "2013", "All", "28.5" ]
+, [ 12, "9F4C8DD6-8082-4A9D-9AA8-165B39F17EA6", 12, 1401279222, "770542", 1456918348, "770542", null, "2013", "White", "23.7" ]
+, [ 13, "653A1AF1-1A98-467A-92BE-2F91DF2028B1", 13, 1401279222, "770542", 1456918376, "770542", null, "2013", "Black", "41.2" ]
+, [ 14, "6253C46E-400B-4F85-B02D-5BB7CCF3185A", 14, 1401279222, "770542", 1456918388, "770542", null, "2013", "Hispanic", "38.1" ]
+, [ 15, "FA56EC44-7A7D-4E6D-9ECE-A4683F2BD5F5", 15, 1401279222, "770542", 1456918400, "770542", null, "2013", "Asian", "15.8" ]
+ ]
+}
