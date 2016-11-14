@@ -11,3 +11,5 @@ I'll comment out the player and the boxes, and build the simpler of the two AIs 
 Once I've developed everything, I'll drop them all in, and then likely cry at how broken it is. Once I've recomposed myself, I'll work out bugs to focus on making the entire game work.
 
 The difficulty will come from making the movements and AI run smoothly. I have no doubt I can build the character, but the enemies and the box collection are where things will get significantly more difficult. I may end up visiting quite a bit as I try to put what is, to me, a massive undertaking.
+
+Mario: http://www.howtogeek.com/wp-content/uploads/blogs/files/2009/04/original.png
