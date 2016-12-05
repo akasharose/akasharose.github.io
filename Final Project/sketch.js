@@ -29,7 +29,7 @@ function draw() {
         charJump();
         charJumpTimer();
       } else {
-        charGravity();
+        gravity();
       }
     }
   }
@@ -42,6 +42,7 @@ function mousePressed() {
 function keyPressed() {
   if (keyCode === UP_ARROW && grounded === true) {
     jump = true;
+    phase1 = true;
     grounded = false;
   }
 }

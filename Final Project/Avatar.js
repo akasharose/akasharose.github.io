@@ -30,11 +30,11 @@ function locationCheck() {
     charX = 1 - charWidth;
   }
   if (charY >= height) {
-    charY = -charHeight + 2;
+    charY = -charHeight + 5;
   }
 }
 
-function charGravity() {
+function gravity() {
   // Check Bottom
   if (charY + 75 == botY && charX >= botX - charWidth && charX <= botX + botLength) {
     grounded = true;
@@ -58,7 +58,7 @@ function charGravity() {
     grounded = true;
     // Gravity
   } else {
-    charY += 4;
+    charY += 5;
     grounded = false;
   }
 }

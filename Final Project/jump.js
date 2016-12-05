@@ -1,13 +1,21 @@
-var jumpTimer = 45;
+var jumpTimer = 27;
+var phase1 = false;
 
 function charJump() {
-  charY -= 4;
+  if (phase1) {
+    charY -= 8;
+  } else {
+    charY -= 6;
+  }
 }
-
+38/16
 function charJumpTimer() {
   jumpTimer -= 1;
   if (jumpTimer === 0) {
     jump = false;
-    jumpTimer = 45;
+    jumpTimer = 27;
+  }
+  if (jumpTimer == 8) {
+    phase1 = false;
   }
 }

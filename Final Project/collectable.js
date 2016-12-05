@@ -11,6 +11,13 @@ function drawCollect() {
   if (collect) {
     generateCollectLocation();
   }
+  drawScore();
+}
+
+function drawScore() {
+  textSize(80);
+  fill(190, 60, 50);
+  text(totalCollected, width / 2, 70)
 }
 
 function generateCollectLocation() {
@@ -27,8 +34,7 @@ function getPosition() {
 }
 
 function checkCollect() {
-  if (charX + charWidth >= xPlace - 18 && charX <= xPlace + 18
-  && charY <= yPlace + 18 && charY + charHeight >= yPlace - 18) {
+  if (charX + charWidth >= xPlace - 18 && charX <= xPlace + 18 && charY <= yPlace + 18 && charY + charHeight >= yPlace - 18) {
     totalCollected++;
     collect = true;
   }
