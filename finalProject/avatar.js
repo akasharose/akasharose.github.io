@@ -36,25 +36,25 @@ function locationCheck() {
 
 function gravity() {
   // Check Bottom
-  if (charY + 75 == botY && charX >= botX - charWidth && charX <= botX + botLength) {
+  if (charY + charHeight == botY && charX >= botX - charWidth && charX <= botX + botLength) {
     grounded = true;
     // Check Bottom Left
-  } else if (charY + 75 == midPlatsY && charX <= midLeftX + midLength) {
+  } else if (charY + charHeight == midPlatsY && charX <= midLeftX + midLength) {
     grounded = true;
     // Check Bottom Right
-  } else if (charY + 75 == midPlatsY && charX >= midRightX - charWidth) {
+  } else if (charY + charHeight == midPlatsY && charX >= midRightX - charWidth) {
     grounded = true;
     // Check Middle
-  } else if (charY + 75 == centY && charX >= centX - charWidth && charX <= centX + centLength) {
+  } else if (charY + charHeight == centY && charX >= centX - charWidth && charX <= centX + centLength) {
     grounded = true;
     // Check Top Left
-  } else if (charY + 75 == topPlatsY && charX <= topLength) {
+  } else if (charY + charHeight == topPlatsY && charX <= topLength) {
     grounded = true;
     // Check Top Right
-  } else if (charY + 75 == topPlatsY && charX >= topRightX - charWidth) {
+  } else if (charY + charHeight == topPlatsY && charX >= topRightX - charWidth) {
     grounded = true;
     // Check Top
-  } else if (charY + 75 == centY2 && charX >= centX - charWidth && charX <= centX + centLength) {
+  } else if (charY + charHeight == centY2 && charX >= centX - charWidth && charX <= centX + centLength) {
     grounded = true;
     // Gravity
   } else {
