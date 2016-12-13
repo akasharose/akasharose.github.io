@@ -5,6 +5,7 @@ var startup = true;
 var failure = false;
 var collect = true;
 var pathed = [];
+var boss = false;
 
 function setup() {
   createCanvas(1000, 800);

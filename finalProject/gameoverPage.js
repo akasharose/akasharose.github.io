@@ -26,5 +26,9 @@ function resetVars() {
   var standStill = false;
   var jump = false;
   var grounded = true;
-  var collect = true; 
+  var collect = true;
+  totalCollected = 0;
+  jump = false;
+  jumpTimer = 27;
+  phase1 = false;
 }

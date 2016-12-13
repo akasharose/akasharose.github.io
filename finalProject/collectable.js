@@ -4,6 +4,7 @@ var collectBlue = 80;
 var xPositions = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 var yPositions = [108, 256, 404, 556, 736];
 var totalCollected = 0;
+var killNumber = 0;
 
 function drawCollect() {
   fill(collectRed, collectGreen, collectBlue);
@@ -37,10 +38,14 @@ function checkCollect() {
   if (charX + charWidth >= xPlace - 18 && charX <= xPlace + 18 && charY <= yPlace + 18 && charY + charHeight >= yPlace - 18) {
     totalCollected++;
     collect = true;
+    if (boss) {
+      damageBoss();
+    } else {
+      killEnemies();
+    }
   }
-  killEnemies();
 }
 
 function killEnemies() {
-  
+  pathed.splice(0, 1);
 }

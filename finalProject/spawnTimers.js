@@ -1,19 +1,18 @@
-var timer = 300;
+var timer = 180;
 var timerShift = 0;
 
 function enemyTimer() {
   timer -= 1;
+  console.log(pathed.length);
   if (timer === 0) {
-    for (var i = 0; i < 1; i++) {
-      pathed.push = (new PathedEnemy());
-      timer = 300 - timerShift;
-      if (timer <= 60) {
-        timerShift === 0;
-      } else if (timer <= 120) {
-        timerShift += 5;
-      } else {
-        timerShift += 10;
-      }
+    pathed.push(new PathedEnemy());
+    timer = 480 - timerShift;
+    if (timer <= 80) {
+      timerShift === 0;
+    } else if (timer <= 120) {
+      timerShift += 5;
+    } else {
+      timerShift += 10;
     }
   }
 }

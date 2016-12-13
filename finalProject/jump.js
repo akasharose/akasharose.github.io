@@ -8,7 +8,7 @@ function charJump() {
     charY -= 6;
   }
 }
-38/16
+
 function charJumpTimer() {
   jumpTimer -= 1;
   if (jumpTimer === 0) {
