@@ -1,4 +1,4 @@
-var pathYPositions = [105, 405, 735];
+var pathYPositions = [25, 25, 50, 210, 210, 210, 555, 600, 650];
 // Pathed Enemy Class
 
 // Constructor Method
@@ -27,6 +27,7 @@ PathedEnemy.prototype.movePathedEnemies = function() {
   } else {
     this.pathPosX -= this.pathMoveX;
   }
+  this.playerCheck();
 };
 // Checks platforms for Pathed Enemies
 PathedEnemy.prototype.platformCheck = function() {
@@ -48,7 +49,7 @@ PathedEnemy.prototype.platformCheck = function() {
   } else {
     this.pathPosY += 5;
   }
-}
+};
 
 PathedEnemy.prototype.pathedLocationCheck = function() {
   // Loops the enemy heading off the left side of the screen to the other side
@@ -66,6 +67,10 @@ PathedEnemy.prototype.pathedLocationCheck = function() {
       this.pathPosX -= width;
     }
   }
-}
+};
 
-// CHECK THAT THE DUDE CAN ENCOUNTER THE PLAYER TO KILL THEM
+PathedEnemy.prototype.playerCheck = function() {
+  if (this.pathPosX + this.pathWidth >= charX && this.pathPosX <= charX + charWidth && this.pathPosY <= charY + charHeight && this.pathPosY + this.pathHeight >= charY) {
+    failure = true;
+  }
+}

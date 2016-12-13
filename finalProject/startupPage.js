@@ -47,6 +47,10 @@ function checkButtons() {
   && mouseX <= width / 2 + 200
   && mouseY >= height / 2 - 80
   && mouseY <= height / 2 + 80) {
+    for (var i = 0; i < 1; i++) {
+      pathed[i] = (new PathedEnemy());
+    }
     startup = false;
+    failure = false;
   }
 }

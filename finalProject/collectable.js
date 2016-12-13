@@ -38,4 +38,9 @@ function checkCollect() {
     totalCollected++;
     collect = true;
   }
+  killEnemies();
+}
+
+function killEnemies() {
+  
 }

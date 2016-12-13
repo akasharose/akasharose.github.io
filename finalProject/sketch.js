@@ -14,18 +14,17 @@ function setup() {
 
 function draw() {
   if (startup) {
-    for (var i = 0; i < 1; i++) {
-      pathed[i] = (new PathedEnemy());
-    }
     startUpPage();
     beginButton();
   } else {
     if (failure) {
-      // endGamePage();
+      endGamePage();
     } else {
       drawWorld();
       moveWorld();
       checkWorld();
+      enemyTimer();
+      // bossTimer();
     }
   }
 }
