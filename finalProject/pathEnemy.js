@@ -1,4 +1,4 @@
-var pathYPositions = [25, 25, 50, 210, 210, 210, 555, 600, 650];
+var pathYPositions = [0, 0, 210, 210, 515, 515];
 // Pathed Enemy Class
 
 // Constructor Method
