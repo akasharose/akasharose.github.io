@@ -25,7 +25,6 @@ function draw() {
       moveWorld();
       checkWorld();
       enemyTimer();
-      // bossTimer();
     }
   }
 }
@@ -43,6 +42,10 @@ function keyPressed() {
 }
 
 function drawWorld() {
+  if (boss) {
+    fill(170, 150, 130);
+    rect(300, 300, 500, 500);
+  }
   drawPlatforms();
   drawCollect();
   drawChar();
@@ -56,9 +59,18 @@ function moveWorld() {
   for (var i = 0; i < pathed.length; i++) {
     pathed[i].movePathedEnemies();
   }
+  if (prepareAttack) {
+    bossAttack();
+  }
 }
 
 function checkWorld() {
+  if (boss) {
+    bossAttackTimer();
+    if (attacking) {
+      bossAttackingTimer();
+    }
+  }
   locationCheck();
   checkCollect();
   for (var i = 0; i < pathed.length; i++) {

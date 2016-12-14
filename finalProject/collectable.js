@@ -49,3 +49,15 @@ function checkCollect() {
 function killEnemies() {
   pathed.splice(0, 1);
 }
+
+function damageBoss() {
+  bossHealth -= 1;
+  if (bossHealth === 0) {
+    boss = false;
+    prepareAttacking = false;
+    attacking = false;
+    attackTimer = 300;
+    attackingTimer = 300;
+    resetPlatformColors();
+  }
+}

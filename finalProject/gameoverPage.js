@@ -31,4 +31,12 @@ function resetVars() {
   jump = false;
   jumpTimer = 27;
   phase1 = false;
+  boss = false;
+  bossLimit = 10;
+  bossHealth = 15;
+  attackTimer = 300;
+  attacking = false;
+  prepareAttack = false;
+  platformAttacked = 0;
+  resetPlatformColors();
 }

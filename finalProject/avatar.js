@@ -38,24 +38,45 @@ function gravity() {
   // Check Bottom
   if (charY + charHeight == botY && charX >= botX - charWidth && charX <= botX + botLength) {
     grounded = true;
-    // Check Bottom Left
+    if (bossBottom && attacking) {
+      failure = true;
+    }
+    // Check Middle Left
   } else if (charY + charHeight == midPlatsY && charX <= midLeftX + midLength) {
     grounded = true;
-    // Check Bottom Right
+    if (bossMidL && attacking) {
+      failure = true;
+    }
+    // Check Middle Right
   } else if (charY + charHeight == midPlatsY && charX >= midRightX - charWidth) {
     grounded = true;
+    if (bossMidR && attacking) {
+      failure = true;
+    }
     // Check Middle
   } else if (charY + charHeight == centY && charX >= centX - charWidth && charX <= centX + centLength) {
     grounded = true;
+    if (bossMid && attacking) {
+      failure = true;
+    }
     // Check Top Left
   } else if (charY + charHeight == topPlatsY && charX <= topLength) {
     grounded = true;
+    if (bossTopL && attacking) {
+      failure = true;
+    }
     // Check Top Right
   } else if (charY + charHeight == topPlatsY && charX >= topRightX - charWidth) {
     grounded = true;
+    if (bossTopR && attacking) {
+      failure = true;
+    }
     // Check Top
   } else if (charY + charHeight == centY2 && charX >= centX - charWidth && charX <= centX + centLength) {
     grounded = true;
+    if (bossTop && attacking) {
+      failure = true;
+    }
     // Gravity
   } else {
     charY += 5;
