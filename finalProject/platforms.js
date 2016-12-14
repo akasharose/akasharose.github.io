@@ -26,25 +26,23 @@ var platBotBlue = platDefaultBlue;
 var platCentRed = platDefaultRed;
 var platCentGreen = platDefaultGreen;
 var platCentBlue = platDefaultBlue;
-var platMidLRed = platDefaultRed;
-var platMidLGreen = platDefaultGreen;
-var platMidLBlue = platDefaultBlue;
-var platMidRRed = platDefaultRed;
-var platMidRGreen = platDefaultGreen;
-var platMidRBlue = platDefaultBlue;
-var platTopLRed = platDefaultRed;
-var platTopLGreen = platDefaultGreen;
-var platTopLBlue = platDefaultBlue;
-var platTopRRed = platDefaultRed;
-var platTopRGreen = platDefaultGreen;
-var platTopRBlue = platDefaultBlue;
+var platMidPairRed = platDefaultRed;
+var platMidPairGreen = platDefaultGreen;
+var platMidPairBlue = platDefaultBlue;
+var platTopPairRed = platDefaultRed;
+var platTopPairGreen = platDefaultGreen;
+var platTopPairBlue = platDefaultBlue;
 var platTopRed = platDefaultRed;
 var platTopGreen = platDefaultGreen;
 var platTopBlue = platDefaultBlue;
 
 function drawPlatforms() {
   rectMode(CORNER);
-  background(60, 60, 100);
+  if (boss) {
+    background(170, 30, 15);
+  } else {
+    background(60, 60, 100);
+  }
   // Draw the bottom platform
   fill(platBotRed, platBotGreen, platBotBlue);
   rect(botX, botY, botLength, platHeight);
@@ -52,14 +50,12 @@ function drawPlatforms() {
   fill(platCentRed, platCentGreen, platCentBlue);
   rect(centX, centY, centLength, platHeight);
   // Draw the bottom two side platforms
-  fill(platMidLRed, platMidLGreen, platMidLBlue);
+  fill(platMidPairRed, platMidPairGreen, platMidPairBlue);
   rect(midLeftX, midPlatsY, midLength, platHeight);
-  fill(platMidRRed, platMidRGreen, platMidRBlue);
   rect(midRightX, midPlatsY, midLength, platHeight);
   // Draw the top two platforms
-  fill(platTopLRed, platTopLGreen, platTopLBlue);
+  fill(platTopPairRed, platTopPairGreen, platTopPairBlue);
   rect(topLeftX, topPlatsY, topLength, platHeight);
-  fill(platTopRRed, platTopRGreen, platTopRBlue);
   rect(topRightX, topPlatsY, topLength, platHeight);
   // Draw the heighest of the platforms
   fill(platTopRed, platTopGreen, platTopBlue);
@@ -67,25 +63,19 @@ function drawPlatforms() {
 }
 
 function resetPlatformColors() {
-  var platBotRed = platDefaultRed;
-  var platBotGreen = platDefaultGreen;
-  var platBotBlue = platDefaultBlue;
-  var platCentRed = platDefaultRed;
-  var platCentGreen = platDefaultGreen;
-  var platCentBlue = platDefaultBlue;
-  var platMidLRed = platDefaultRed;
-  var platMidLGreen = platDefaultGreen;
-  var platMidLBlue = platDefaultBlue;
-  var platMidRRed = platDefaultRed;
-  var platMidRGreen = platDefaultGreen;
-  var platMidRBlue = platDefaultBlue;
-  var platTopLRed = platDefaultRed;
-  var platTopLGreen = platDefaultGreen;
-  var platTopLBlue = platDefaultBlue;
-  var platTopRRed = platDefaultRed;
-  var platTopRGreen = platDefaultGreen;
-  var platTopRBlue = platDefaultBlue;
-  var platTopRed = platDefaultRed;
-  var platTopGreen = platDefaultGreen;
-  var platTopBlue = platDefaultBlue;
+  platBotRed = platDefaultRed;
+  platBotGreen = platDefaultGreen;
+  platBotBlue = platDefaultBlue;
+  platCentRed = platDefaultRed;
+  platCentGreen = platDefaultGreen;
+  platCentBlue = platDefaultBlue;
+  platMidPairRed = platDefaultRed;
+  platMidPairGreen = platDefaultGreen;
+  platMidPairBlue = platDefaultBlue;
+  platTopPairRed = platDefaultRed;
+  platTopPairGreen = platDefaultGreen;
+  platTopPairBlue = platDefaultBlue;
+  platTopRed = platDefaultRed;
+  platTopGreen = platDefaultGreen;
+  platTopBlue = platDefaultBlue;
 }

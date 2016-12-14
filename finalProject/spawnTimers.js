@@ -1,14 +1,16 @@
 var timer = 240;
 var timerShift = 0;
-var bossLimit = 10;
+var bossLimit = 1;
+var bossTimer = 30;
 
 function enemyTimer() {
   timer -= 1;
-  console.log(pathed.length);
+  bossEnemyTimer();
   if (timer === 0) {
-    if (totalCollected <= bossLimit) {
-      pathed.push(new PathedEnemy());
-      timer = 240 - timerShift;
+    // pathed.push(new PathedEnemy());
+    if (boss) {
+      timer = 480 - timerShift;
+    } else {
       if (timer <= 120) {
         timerShift === 0;
       } else if (timer <= 180) {
@@ -16,9 +18,16 @@ function enemyTimer() {
       } else {
         timerShift += 3;
       }
-    } else {
-      boss = true;
-      bossLimit += 30;
     }
+  }
+}
+
+function bossEnemyTimer() {
+  bossTimer -= 1;
+  if (totalCollected >= bossLimit && bossTimer === 0) {
+    boss = true;
+    bossLimit += 30;
+  } else if (bossTimer === 0) {
+    bossTimer = 30;
   }
 }

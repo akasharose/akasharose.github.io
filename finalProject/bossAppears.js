@@ -1,58 +1,53 @@
-bossHealth = 15;
-platformChoices = [bottom, middle, middleLeft, middleRight, topLeft, topRight, top];
-platformAttacked = 0;
+bossHealth = 10;
+platformChoices = [0, 1, 2, 3, 4];
+platformAttacked = 7;
 prepareAttack = false;
 attacking = false;
 attackTimer = 300;
 attackingTimer = 300;
+bossBottom = false;
+bossMid = false;
+bossMidPair = false;
+bossTopPair = false;
+bossTop = false;
 
 function bossAttackTimer() {
   attackTimer -= 1;
   if (attackTimer === 0) {
     prepareAttack = true;
     attackTimer = 755;
+    platformAttacked = random(platformChoices)
   }
 }
 
 function bossAttack() {
-  platformAttacked = random(platformChoices);
-  if (platformAttacked = bottom) {
-    var platBotRed += 1;
-    var platBotGreen = platAttackedGreen;
-    var platBotBlue = platAttackedBlue;
+  if (platformAttacked === 0) {
+    platBotRed += 1;
+    platBotGreen = platAttackedGreen;
+    platBotBlue = platAttackedBlue;
     bossBottom = true;
-  } else if (platformAttacked = middle) {
-    var platCentRed += 1;
-    var platCentGreen = platAttackedGreen;
-    var platCentBlue = platAttackedBlue;
+  } else if (platformAttacked == 1) {
+    platCentRed += 1;
+    platCentGreen = platAttackedGreen;
+    platCentBlue = platAttackedBlue;
     bossMid = true;
-  } else if (platformAttacked = middleLeft) {
-    var platMidLRed += 1;
-    var platMidLGreen = platAttackedGreen;
-    var platMidLBlue = platAttackedBlue;
-    bossMidL = true;
-  } else if (platformAttacked = middleRight) {
-    var platMidRRed += 1;
-    var platMidRGreen = platAttackedGreen;
-    var platMidRBlue = platAttackedBlue;
-    bossMidR = true;
-  } else if (platformAttacked = topLeft) {
-    var platTopLRed += 255;
-    var platTopLGreen = platAttackedGreen;
-    var platTopLBlue = platAttackedBlue;
-    bossTopL = true;
-  } else if (platformAttacked = topRight) {
-    var platTopRRed += 1;
-    var platTopRGreen = platAttackedGreen;
-    var platTopRBlue = platAttackedBlue;
-    bossTopR = true;
-  } else if (platformAttacked = top) {
-    var platTopRed += 1;
-    var platTopGreen = platAttackedGreen;
-    var platTopBlue = platAttackedBlue;
+  } else if (platformAttacked == 2) {
+    platMidPairRed += 1;
+    platMidPairGreen = platAttackedGreen;
+    platMidPairBlue = platAttackedBlue;
+    bossMidPair = true;
+  } else if (platformAttacked == 3) {
+    platTopPairRed += 1;
+    platTopPairGreen = platAttackedGreen;
+    platTopPairBlue = platAttackedBlue;
+    bossTopPair = true;
+  } else if (platformAttacked == 4) {
+    platTopRed += 1;
+    platTopGreen = platAttackedGreen;
+    platTopBlue = platAttackedBlue;
     bossTop = true;
   }
-  if (platBotRed == 255 || platCentRed == 255 || platMidLRed == 255 || platMidRRed == 255 || platTopLRed == 255) || platTopRRed == 255 || platTopRed == 255) {
+  if (platBotRed == 255 || platCentRed == 255 || platMidPairRed == 255 || platTopPairRed == 255 || platTopRed == 255) {
     prepareAttack = false;
     attacking = true;
   }
@@ -63,5 +58,12 @@ function bossAttackingTimer() {
   if (attackingTimer === 0) {
     attacking = false;
     resetPlatformColors();
+    bossBottom = false;
+    bossMid = false;
+    bossMidPair = false;
+    bossTopPair = false;
+    bossTop = false;
+    attackingTimer = 300;
+    bossTimer = 30;
   }
 }

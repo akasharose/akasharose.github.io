@@ -42,10 +42,6 @@ function keyPressed() {
 }
 
 function drawWorld() {
-  if (boss) {
-    fill(170, 150, 130);
-    rect(300, 300, 500, 500);
-  }
   drawPlatforms();
   drawCollect();
   drawChar();

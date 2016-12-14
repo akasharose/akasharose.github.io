@@ -33,7 +33,7 @@ function resetVars() {
   phase1 = false;
   boss = false;
   bossLimit = 10;
-  bossHealth = 15;
+  bossHealth = 10;
   attackTimer = 300;
   attacking = false;
   prepareAttack = false;

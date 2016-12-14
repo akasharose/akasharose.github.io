@@ -4,7 +4,6 @@ var charWidth = 50;
 var charHeight = 75;
 
 function drawChar() {
-  // Draws the Character -- NEED TO REPLACE WITH SPRITES... EVENTUALLY
   fill(238, 45, 160);
   rect(charX, charY, charWidth, charHeight);
 }
@@ -44,13 +43,13 @@ function gravity() {
     // Check Middle Left
   } else if (charY + charHeight == midPlatsY && charX <= midLeftX + midLength) {
     grounded = true;
-    if (bossMidL && attacking) {
+    if (bossMidPair && attacking) {
       failure = true;
     }
     // Check Middle Right
   } else if (charY + charHeight == midPlatsY && charX >= midRightX - charWidth) {
     grounded = true;
-    if (bossMidR && attacking) {
+    if (bossMidPair && attacking) {
       failure = true;
     }
     // Check Middle
@@ -62,13 +61,13 @@ function gravity() {
     // Check Top Left
   } else if (charY + charHeight == topPlatsY && charX <= topLength) {
     grounded = true;
-    if (bossTopL && attacking) {
+    if (bossTopPair && attacking) {
       failure = true;
     }
     // Check Top Right
   } else if (charY + charHeight == topPlatsY && charX >= topRightX - charWidth) {
     grounded = true;
-    if (bossTopR && attacking) {
+    if (bossTopPair && attacking) {
       failure = true;
     }
     // Check Top
