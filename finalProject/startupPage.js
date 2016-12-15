@@ -14,9 +14,9 @@ function beginButton() {
   fill(205, 15, 15);
   rect(width / 2, height / 2, 400, 160);
   fill(wordRed, wordGreen, wordBlue);
-  // Need to better place the text
   textSize(85);
   text('BEGIN!', width / 2, height / 2 + 25);
+  instructions();
   colorShift();
 }
 
@@ -55,4 +55,12 @@ function checkButtons() {
     ambientTheme.loop();
     totalCollected = 0;
   }
+}
+
+function instructions() {
+  fill(0, 0, 255);
+  textSize(30);
+  text('Grab the Swords to earn points!', width / 2, height * 1 / 9);
+  text('Swords kill enemies and damage Bosses!', width / 2, height * 2 / 9);
+  text('Fall off the bottom of the screen to appear at the top!', width / 2, height * 3 / 9);
 }

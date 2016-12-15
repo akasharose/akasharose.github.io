@@ -61,43 +61,43 @@ function locationCheck() {
 
 function gravity() {
   // Check Bottom
-  if (charY + charHeight == botY && charX >= botX - charWidth && charX <= botX + botLength) {
+  if (charY + charHeight == botY && charX >= botX - charWidth * 7 / 10 && charX <= botX + botLength - 15) {
     grounded = true;
     if (bossBottom && attacking) {
       failure = true;
     }
     // Check Middle Left
-  } else if (charY + charHeight == midPlatsY && charX <= midLeftX + midLength) {
+  } else if (charY + charHeight == midPlatsY && charX <= midLeftX + midLength - 15) {
     grounded = true;
     if (bossMidPair && attacking) {
       failure = true;
     }
     // Check Middle Right
-  } else if (charY + charHeight == midPlatsY && charX >= midRightX - charWidth) {
+  } else if (charY + charHeight == midPlatsY && charX >= midRightX - charWidth * 7 / 10) {
     grounded = true;
     if (bossMidPair && attacking) {
       failure = true;
     }
     // Check Middle
-  } else if (charY + charHeight == centY && charX >= centX - charWidth && charX <= centX + centLength) {
+  } else if (charY + charHeight == centY && charX >= centX - charWidth * 7 / 10 && charX <= centX + centLength - 15) {
     grounded = true;
     if (bossMid && attacking) {
       failure = true;
     }
     // Check Top Left
-  } else if (charY + charHeight == topPlatsY && charX <= topLength) {
+  } else if (charY + charHeight == topPlatsY && charX <= topLength - 15) {
     grounded = true;
     if (bossTopPair && attacking) {
       failure = true;
     }
     // Check Top Right
-  } else if (charY + charHeight == topPlatsY && charX >= topRightX - charWidth) {
+  } else if (charY + charHeight == topPlatsY && charX >= topRightX - charWidth * 7 / 10) {
     grounded = true;
     if (bossTopPair && attacking) {
       failure = true;
     }
     // Check Top
-  } else if (charY + charHeight == centY2 && charX >= centX - charWidth && charX <= centX + centLength) {
+  } else if (charY + charHeight == centY2 && charX >= centX - charWidth * 7 /10 && charX <= centX + centLength - 15) {
     grounded = true;
     if (bossTop && attacking) {
       failure = true;
