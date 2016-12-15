@@ -15,7 +15,7 @@ function preload() {
   pathedEnemyLeft = loadImage("sprites/enemyLeft.png");
   backgroundBoss = loadImage("sprites/backgroundBoss.png");
   bossStill = loadImage("sprites/boss.png");
-  bossAngry = loadImage("sprites/ANGER.png");
+  bossAngry = loadImage("sprites/anger.png");
   bossDead = loadImage("sprites/ded.png");
   avatarStandStillRight = loadImage("sprites/avatarLazyRight.png");
   avatarStandStillLeft = loadImage("sprites/avatarLazyLeft.png");
