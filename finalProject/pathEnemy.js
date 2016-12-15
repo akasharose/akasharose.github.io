@@ -16,8 +16,11 @@ function PathedEnemy() {
 PathedEnemy.prototype.drawPathedEnemies = function() {
   push();
   // The shape grabbed with be a sprite, rather than a shape -- this is for filler
-  fill(255, 153, 51);
-  rect(this.pathPosX, this.pathPosY, this.pathWidth, this.pathHeight);
+  if (this.goRight) {
+    image(pathedEnemyRight, this.pathPosX, this.pathPosY);
+  } else {
+    image(pathedEnemyLeft, this.pathPosX, this.pathPosY);
+  }
   pop();
 };
 // Moves the Enemies in the horizontal direction

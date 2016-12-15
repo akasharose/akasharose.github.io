@@ -39,9 +39,8 @@ var platTopBlue = platDefaultBlue;
 function drawPlatforms() {
   rectMode(CORNER);
   if (boss) {
-    background(170, 30, 15);
-  } else {
-    background(60, 60, 100);
+    image(backgroundBoss, 0, 0);
+    image(boss, 0, 0);
   }
   // Draw the bottom platform
   fill(platBotRed, platBotGreen, platBotBlue);

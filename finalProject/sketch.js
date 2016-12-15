@@ -11,13 +11,19 @@ var bossTheme;
 
 function preload() {
   ambientTheme = loadSound("sounds/Winter Bliss - Castle Crashers.mp3");
+  collectableSprite = loadImage("collectable.png");
+  pathedEnemyRight = loadImage("enemy.png");
+  pathedEnemyLeft = loadImage("enemyLeft.png");
+  backgroundNormal = loadImage("backgroundNormal.png");
+  backgroundBoss = loadImage("backgroundBoss.png");
+  boss = loadImage("boss.png");
 }
 
 function setup() {
   createCanvas(1000, 800);
   frameRate(60);
   generateCollectLocation();
-  ambientTheme.loop();
+  // ambientTheme.loop();
 }
 
 function draw() {

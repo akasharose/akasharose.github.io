@@ -1,14 +1,11 @@
-var collectRed = 70;
-var collectGreen = 130;
-var collectBlue = 80;
+var collectableSprite
 var xPositions = [100, 200, 300, 400, 600, 700, 800, 900];
 var yPositions = [108, 256, 404, 556, 736];
 var totalCollected = 0;
 var killNumber = 0;
 
 function drawCollect() {
-  fill(collectRed, collectGreen, collectBlue);
-  ellipse(xPlace, yPlace, 36, 36)
+  image(collectableSprite, xPlace - 18, yPlace - 18);
   if (collect) {
     generateCollectLocation();
   }
@@ -65,6 +62,5 @@ function damageBoss() {
     bossMidPair = false;
     bossTopPair = false;
     bossTop = false;
-    bossLimit += 20;
   }
 }

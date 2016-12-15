@@ -34,7 +34,6 @@ function resetVars() {
   boss = false;
   bossLimit = 10;
   bossHealth = 10;
-  bossHealthGain = 0;
   attackTimer = 300;
   attacking = false;
   prepareAttack = false;

@@ -65,6 +65,6 @@ function bossAttackingTimer() {
     bossTopPair = false;
     bossTop = false;
     attackingTimer = 300;
-    bossTimer = 30;
+    bossTimer = 3600;
   }
 }

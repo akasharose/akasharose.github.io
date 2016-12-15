@@ -2,7 +2,6 @@ var wordBlue = 175;
 var colorChange = 1;
 var wordGreen = 125;
 var wordRed = 75;
-var spawn = 1;
 
 function startUpPage() {
   background(0);
@@ -48,7 +47,7 @@ function checkButtons() {
   && mouseX <= width / 2 + 200
   && mouseY >= height / 2 - 80
   && mouseY <= height / 2 + 80) {
-    for (var i = 0; i < spawn; i++) {
+    for (var i = 0; i < 1; i++) {
       pathed[i] = (new PathedEnemy());
     }
     startup = false;
