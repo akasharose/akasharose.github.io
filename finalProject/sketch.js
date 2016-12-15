@@ -10,7 +10,7 @@ var ambientTheme;
 
 function preload() {
   ambientTheme = loadSound("sounds/Revenge of the Cyclops - Castle Crashers.mp3");
-  collectableSprite = loadImage("Sprites/collectable.png");
+  collectableSprite = loadImage("Sprites/Collectable.png");
   pathedEnemyRight = loadImage("Sprites/enemy.png");
   pathedEnemyLeft = loadImage("Sprites/enemyLeft.png");
   backgroundBoss = loadImage("Sprites/backgroundBoss.png");
