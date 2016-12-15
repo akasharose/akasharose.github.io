@@ -14,6 +14,7 @@ bossTop = false;
 bossY = 800;
 drop = true;
 angry = false;
+bossDying = false;
 
 function bossAttackTimer() {
   attackTimer -= 1;
@@ -89,5 +90,13 @@ function bossBounce() {
     if (bossY <= -30) {
       drop = true;
     }
+  }
+}
+
+function bossDeath() {
+  bossDying = true;
+  bossY += 2;
+  if (bossY >= 800) {
+    bossDying = false;
   }
 }

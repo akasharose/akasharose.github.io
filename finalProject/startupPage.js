@@ -52,5 +52,6 @@ function checkButtons() {
     }
     startup = false;
     failure = false;
+    ambientTheme.loop();
   }
 }

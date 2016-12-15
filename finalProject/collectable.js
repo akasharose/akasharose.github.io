@@ -63,6 +63,6 @@ function damageBoss() {
     bossTopPair = false;
     bossTop = false;
     angry = false;
-    bossY = 800;
+    bossDeath();
   }
 }

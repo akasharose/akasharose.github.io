@@ -2,6 +2,7 @@ function endGamePage() {
   background(0);
   restartButton();
   resetVars();
+  ambientTheme.stop();
   // Reset all enemy arrays and variables back to original.
 }
 

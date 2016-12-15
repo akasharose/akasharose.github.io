@@ -8,7 +8,7 @@ function enemyTimer() {
   if (timer === 0) {
     pathed.push(new PathedEnemy());
     if (boss) {
-      timer = 260 - timerShift;
+      timer = 220;
     } else {
       timer = 220 - timerShift
       if (timer <= 120) {

@@ -15,8 +15,8 @@ var topLength = 200;
 var topPlatsY = 290;
 var topRightX = 800;
 var platDefaultRed = 100;
-var platDefaultGreen = 67;
-var platDefaultBlue = 33;
+var platDefaultGreen = 112;
+var platDefaultBlue = 108;
 var platAttackedGreen = 30;
 var platAttackedBlue = 15;
 
@@ -46,6 +46,10 @@ function drawPlatforms() {
     } else {
       image(bossStill, 0, bossY);
     }
+  }
+  if (bossDying) {
+    image(bossDead, 0, bossY);
+    bossDeath();
   }
   // Draw the bottom platform
   fill(platBotRed, platBotGreen, platBotBlue);

@@ -7,7 +7,6 @@ var collect = true;
 var pathed = [];
 var boss = false;
 var ambientTheme;
-var bossTheme;
 
 function preload() {
   ambientTheme = loadSound("sounds/Revenge of the Cyclops - Castle Crashers.mp3");
@@ -17,6 +16,7 @@ function preload() {
   backgroundBoss = loadImage("backgroundBoss.png");
   bossStill = loadImage("boss.png");
   bossAngry = loadImage("ANGER.png");
+  bossDead = loadImage("ded.png");
   avatarStandStillRight = loadImage("avatarLazyRight.png");
   avatarStandStillLeft = loadImage("avatarLazyLeft.png");
   avatarMovingLeft = loadImage("avatarRunningLeft.png");
@@ -29,7 +29,6 @@ function setup() {
   createCanvas(1000, 800);
   frameRate(60);
   generateCollectLocation();
-  // ambientTheme.loop();
 }
 
 function draw() {
