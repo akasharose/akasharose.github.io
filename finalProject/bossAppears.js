@@ -11,6 +11,9 @@ bossMid = false;
 bossMidPair = false;
 bossTopPair = false;
 bossTop = false;
+bossY = 800;
+drop = true;
+angry = false;
 
 function bossAttackTimer() {
   attackTimer -= 1;
@@ -22,6 +25,7 @@ function bossAttackTimer() {
 }
 
 function bossAttack() {
+  angry = true;
   if (platformAttacked === 0) {
     platBotRed += 1;
     platBotGreen = platAttackedGreen;
@@ -51,6 +55,7 @@ function bossAttack() {
   if (platBotRed == 255 || platCentRed == 255 || platMidPairRed == 255 || platTopPairRed == 255 || platTopRed == 255) {
     prepareAttack = false;
     attacking = true;
+    angry = false;
   }
 }
 
@@ -66,5 +71,23 @@ function bossAttackingTimer() {
     bossTop = false;
     attackingTimer = 300;
     bossTimer = 3600;
+  }
+}
+
+function bossBounce() {
+  if (drop) {
+    bossY += 1;
+    if (bossY >= 60) {
+      drop = false;
+    }
+  } else {
+    if (bossY >= 100) {
+      bossY -= 2;
+    } else {
+      bossY -= 1;
+    }
+    if (bossY <= -30) {
+      drop = true;
+    }
   }
 }

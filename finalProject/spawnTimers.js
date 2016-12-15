@@ -1,6 +1,5 @@
 var timer = 220;
 var timerShift = 0;
-var bossLimit = 10;
 var bossTimer = 30;
 
 function enemyTimer() {
@@ -25,7 +24,7 @@ function enemyTimer() {
 
 function bossEnemyTimer() {
   bossTimer -= 1;
-  if (totalCollected >= bossLimit && bossTimer === 0) {
+  if (totalCollected >= 10 && bossTimer === 0) {
     boss = true;
   } else if (bossTimer === 0) {
     bossTimer = 30;

@@ -2,20 +2,46 @@ var charX = 475;
 var charY = centY - 75;
 var charWidth = 50;
 var charHeight = 75;
+var moving = false;
+var charLeft = false;
 
 function drawChar() {
-  fill(238, 45, 160);
-  rect(charX, charY, charWidth, charHeight);
+  if (grounded) {
+    if (moving) {
+      if (charLeft) {
+        image(avatarMovingLeft, charX, charY);
+      } else {
+        image(avatarMovingRight, charX, charY);
+      }
+    } else {
+      if (charLeft) {
+        image(avatarStandStillLeft, charX, charY);
+      } else {
+        image(avatarStandStillRight, charX, charY);
+      }
+    }
+  } else {
+    if (charLeft) {
+      image(avatarJumpingLeft, charX, charY);
+    } else {
+      image(avatarJumpingRight, charX, charY);
+    }
+  }
 }
 
 function charMove() {
   // Moves the character to the Left and Right accordingly
   // The character cannot go past the edge of the screen.
   if (keyIsDown(LEFT_ARROW)) {
+    moving = true;
+    charLeft = true;
     charX -= 4;
-  }
-  if (keyIsDown(RIGHT_ARROW)) {
+  } else if (keyIsDown(RIGHT_ARROW)) {
+    moving = true;
+    charLeft = false;
     charX += 4;
+  } else {
+    moving = false;
   }
 }
 

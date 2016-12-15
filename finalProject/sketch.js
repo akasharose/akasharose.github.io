@@ -10,13 +10,19 @@ var ambientTheme;
 var bossTheme;
 
 function preload() {
-  ambientTheme = loadSound("sounds/Winter Bliss - Castle Crashers.mp3");
+  ambientTheme = loadSound("sounds/Revenge of the Cyclops - Castle Crashers.mp3");
   collectableSprite = loadImage("collectable.png");
   pathedEnemyRight = loadImage("enemy.png");
   pathedEnemyLeft = loadImage("enemyLeft.png");
-  backgroundNormal = loadImage("backgroundNormal.png");
   backgroundBoss = loadImage("backgroundBoss.png");
-  boss = loadImage("boss.png");
+  bossStill = loadImage("boss.png");
+  bossAngry = loadImage("ANGER.png");
+  avatarStandStillRight = loadImage("avatarLazyRight.png");
+  avatarStandStillLeft = loadImage("avatarLazyLeft.png");
+  avatarMovingLeft = loadImage("avatarRunningLeft.png");
+  avatarMovingRight = loadImage("avatarRunningRight.png");
+  avatarJumpingLeft = loadImage("avatarFallingLeft.png");
+  avatarJumpingRight = loadImage("avatarFallingRight.png");
 }
 
 function setup() {
