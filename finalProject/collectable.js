@@ -60,5 +60,10 @@ function damageBoss() {
     attackingTimer = 300;
     resetPlatformColors();
     bossHealth = 15;
+    bossBottom = false;
+    bossMid = false;
+    bossMidPair = false;
+    bossTopPair = false;
+    bossTop = false;
   }
 }

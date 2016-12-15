@@ -23,10 +23,10 @@ function resetVars() {
   pathed = [];
   timer = 300;
   timerShift = 0;
-  var standStill = false;
-  var jump = false;
-  var grounded = true;
-  var collect = true;
+  standStill = false;
+  jump = false;
+  grounded = true;
+  collect = true;
   totalCollected = 0;
   jump = false;
   jumpTimer = 27;
@@ -34,9 +34,15 @@ function resetVars() {
   boss = false;
   bossLimit = 10;
   bossHealth = 10;
+  bossHealthGain = 0;
   attackTimer = 300;
   attacking = false;
   prepareAttack = false;
   platformAttacked = 0;
   resetPlatformColors();
+  bossBottom = false;
+  bossMid = false;
+  bossMidPair = false;
+  bossTopPair = false;
+  bossTop = false;
 }

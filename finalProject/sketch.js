@@ -6,11 +6,18 @@ var failure = false;
 var collect = true;
 var pathed = [];
 var boss = false;
+var ambientTheme;
+var bossTheme;
+
+function preload() {
+  ambientTheme = loadSound("sounds/Winter Bliss - Castle Crashers.mp3");
+}
 
 function setup() {
   createCanvas(1000, 800);
   frameRate(60);
   generateCollectLocation();
+  ambientTheme.loop();
 }
 
 function draw() {

@@ -1,6 +1,7 @@
 bossHealth = 10;
+bossHealthGain = 5;
 platformChoices = [0, 1, 2, 3, 4];
-platformAttacked = 7;
+platformAttacked = 5;
 prepareAttack = false;
 attacking = false;
 attackTimer = 300;
