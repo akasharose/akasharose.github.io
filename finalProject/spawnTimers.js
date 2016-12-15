@@ -27,7 +27,6 @@ function bossEnemyTimer() {
   bossTimer -= 1;
   if (totalCollected >= bossLimit && bossTimer === 0) {
     boss = true;
-    bossLimit += 20;
   } else if (bossTimer === 0) {
     bossTimer = 30;
   }

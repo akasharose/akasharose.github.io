@@ -65,5 +65,6 @@ function damageBoss() {
     bossMidPair = false;
     bossTopPair = false;
     bossTop = false;
+    bossLimit += 20;
   }
 }
