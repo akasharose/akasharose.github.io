@@ -15,6 +15,8 @@ function restartButton() {
   // Need to better place the text
   textSize(85);
   text('Restart?', width / 2, height / 2 + 25);
+  text('Score:', width/ 2, height * 3/4 - 25);
+  text(totalCollected, width / 2, height * 4/5 + 20);
   colorShift();
 }
 
@@ -28,7 +30,6 @@ function resetVars() {
   jump = false;
   grounded = true;
   collect = true;
-  totalCollected = 0;
   jump = false;
   jumpTimer = 27;
   phase1 = false;

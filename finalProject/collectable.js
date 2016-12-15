@@ -1,6 +1,10 @@
 var collectableSprite
 var xPositions = [100, 200, 300, 400, 600, 700, 800, 900];
 var yPositions = [108, 256, 404, 556, 736];
+var XPlace = 0;
+var YPlace = 0;
+var oldXPlace = 0;
+var oldYPlace = 0;
 var totalCollected = 0;
 var killNumber = 0;
 
@@ -22,8 +26,10 @@ function generateCollectLocation() {
   getPosition();
   do {
     getPosition();
-  } while (xPlace == 100 && yPlace == 736 || xPlace == 900 && yPlace == 736);
+  } while (xPlace == 100 && yPlace == 736 || xPlace == 900 && yPlace == 736 || (oldXPlace == xPlace && oldYPlace == YPlace));
   collect = false;
+  oldXPlace = xPlace;
+  oldYPlace = yPlace;
 }
 
 function getPosition() {
@@ -35,6 +41,7 @@ function checkCollect() {
   if (charX + charWidth >= xPlace - 18 && charX <= xPlace + 18 && charY <= yPlace + 18 && charY + charHeight >= yPlace - 18) {
     totalCollected++;
     collect = true;
+    collectableCollected.play();
     if (boss) {
       damageBoss();
     } else {

@@ -10,6 +10,7 @@ var ambientTheme;
 
 function preload() {
   ambientTheme = loadSound("sounds/revengeOfTheCyclops.mp3");
+  collectableCollected = loadSound("sounds/dingSoundEffect.wav");
   collectableSprite = loadImage("sprites/collectable.png");
   pathedEnemyRight = loadImage("sprites/enemy.png");
   pathedEnemyLeft = loadImage("sprites/enemyLeft.png");
