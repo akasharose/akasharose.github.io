@@ -9,20 +9,20 @@ var boss = false;
 var ambientTheme;
 
 function preload() {
-  ambientTheme = loadSound("sounds/Revenge of the Cyclops - Castle Crashers.mp3");
-  collectableSprite = loadImage("Sprites/Collectable.png");
-  pathedEnemyRight = loadImage("Sprites/enemy.png");
-  pathedEnemyLeft = loadImage("Sprites/enemyLeft.png");
-  backgroundBoss = loadImage("Sprites/backgroundBoss.png");
-  bossStill = loadImage("Sprites/boss.png");
-  bossAngry = loadImage("Sprites/ANGER.png");
-  bossDead = loadImage("Sprites/ded.png");
-  avatarStandStillRight = loadImage("Sprites/avatarLazyRight.png");
-  avatarStandStillLeft = loadImage("Sprites/avatarLazyLeft.png");
-  avatarMovingLeft = loadImage("Sprites/avatarRunningLeft.png");
-  avatarMovingRight = loadImage("Sprites/avatarRunningRight.png");
-  avatarJumpingLeft = loadImage("Sprites/avatarFallingLeft.png");
-  avatarJumpingRight = loadImage("Sprites/avatarFallingRight.png");
+  ambientTheme = loadSound("sounds/revengeOfTheCyclops.mp3");
+  collectableSprite = loadImage("sprites/collectable.png");
+  pathedEnemyRight = loadImage("sprites/enemy.png");
+  pathedEnemyLeft = loadImage("sprites/enemyLeft.png");
+  backgroundBoss = loadImage("sprites/backgroundBoss.png");
+  bossStill = loadImage("sprites/boss.png");
+  bossAngry = loadImage("sprites/ANGER.png");
+  bossDead = loadImage("sprites/ded.png");
+  avatarStandStillRight = loadImage("sprites/avatarLazyRight.png");
+  avatarStandStillLeft = loadImage("sprites/avatarLazyLeft.png");
+  avatarMovingLeft = loadImage("sprites/avatarRunningLeft.png");
+  avatarMovingRight = loadImage("sprites/avatarRunningRight.png");
+  avatarJumpingLeft = loadImage("sprites/avatarFallingLeft.png");
+  avatarJumpingRight = loadImage("sprites/avatarFallingRight.png");
 }
 
 function setup() {
