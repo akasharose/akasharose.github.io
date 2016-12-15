@@ -1,4 +1,4 @@
-var pathYPositions = [0, 0, 210, 210, 515, 515];
+var pathYPositions = [0, 0, 210, 210, 495, 495];
 // Pathed Enemy Class
 
 // Constructor Method
@@ -11,6 +11,7 @@ function PathedEnemy() {
   this.pathMoveX = 3;
   // Variables for the starting direction
   this.goRight = floor(random(2));
+  this.damage = false;
 }
 // Draws the Enemies
 PathedEnemy.prototype.drawPathedEnemies = function() {
@@ -36,16 +37,22 @@ PathedEnemy.prototype.movePathedEnemies = function() {
 PathedEnemy.prototype.platformCheck = function() {
   // Check Bottom
   if (this.pathPosY + this.pathHeight == botY && this.pathPosX >= botX - this.pathWidth && this.pathPosX <= botX + botLength) {
+    this.damage = true;
     // Check Bottom Left
   } else if (this.pathPosY + this.pathHeight == midPlatsY && this.pathPosX <= midLeftX + midLength) {
+    this.damage = true;
     // Check Bottom Right
   } else if (this.pathPosY + this.pathHeight == midPlatsY && this.pathPosX >= midRightX - this.pathWidth) {
+    this.damage = true;
     // Check Middle
   } else if (this.pathPosY + this.pathHeight == centY && this.pathPosX >= centX - this.pathWidth && this.pathPosX <= centX + centLength) {
+    this.damage = true;
     // Check Top Left
   } else if (this.pathPosY + this.pathHeight == topPlatsY && this.pathPosX <= topLength) {
+    this.damage = true;
     // Check Top Right
   } else if (this.pathPosY + this.pathHeight == topPlatsY && this.pathPosX >= topRightX - this.pathWidth) {
+    this.damage = true;
     // Check Top
   } else if (this.pathPosY + this.pathHeight == centY2 && this.pathPosX >= centX - this.pathWidth && this.pathPosX <= centX + centLength) {
     // Gravity
@@ -73,7 +80,9 @@ PathedEnemy.prototype.pathedLocationCheck = function() {
 };
 
 PathedEnemy.prototype.playerCheck = function() {
-  if (this.pathPosX + this.pathWidth >= charX && this.pathPosX <= charX + charWidth && this.pathPosY <= charY + charHeight && this.pathPosY + this.pathHeight >= charY) {
-    failure = true;
+  if (this.damage) {
+    if (this.pathPosX + this.pathWidth >= charX && this.pathPosX <= charX + charWidth && this.pathPosY <= charY + charHeight && this.pathPosY + this.pathHeight >= charY) {
+      failure = true;
+    }
   }
 }
