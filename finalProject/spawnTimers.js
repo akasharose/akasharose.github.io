@@ -3,6 +3,7 @@ var timerShift = 0;
 var bossTimer = 30;
 
 function enemyTimer() {
+  // Enemy Spawn Timer -- when timer hits 0, a new enemy is added to the array
   timer -= 1;
   bossEnemyTimer();
   if (timer === 0) {

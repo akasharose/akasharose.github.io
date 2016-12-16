@@ -22,6 +22,7 @@ function restartButton() {
 }
 
 function resetVars() {
+  // Reset all variables to the starting state
   charX = 475;
   charY = centY - 75;
   pathed = [];

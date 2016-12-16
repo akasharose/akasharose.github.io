@@ -17,6 +17,7 @@ angry = false;
 bossDying = false;
 
 function bossAttackTimer() {
+  // Times the attack, eventually chooses the platform to attack
   attackTimer -= 1;
   if (attackTimer === 0) {
     prepareAttack = true;
@@ -26,6 +27,7 @@ function bossAttackTimer() {
 }
 
 function bossAttack() {
+  // Attacks the platform selected in bossAttackTimer()
   angry = true;
   if (platformAttacked === 0) {
     platBotRed += 1;
@@ -61,6 +63,7 @@ function bossAttack() {
 }
 
 function bossAttackingTimer() {
+  // While the attacking is damaging the player, this timer counts it down
   attackingTimer -= 1;
   if (attackingTimer === 0) {
     attacking = false;
@@ -76,6 +79,7 @@ function bossAttackingTimer() {
 }
 
 function bossBounce() {
+  // Causes the boss to move up and down during combat
   if (drop) {
     bossY += 1;
     if (bossY >= 60) {

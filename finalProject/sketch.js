@@ -9,6 +9,7 @@ var boss = false;
 var ambientTheme;
 
 function preload() {
+  // Preloads all Sounds and Sprites
   ambientTheme = loadSound("sounds/revengeOfTheCyclops.mp3");
   collectableCollected = loadSound("sounds/dingSoundEffect.wav");
   collectableSprite = loadImage("sprites/collectable.png");
@@ -33,6 +34,8 @@ function setup() {
 }
 
 function draw() {
+  // Runs the startup page until begun for the first time.
+  // After, it'll either be running the game, or showing the failure screen.
   if (startup) {
     startUpPage();
     beginButton();
@@ -53,6 +56,8 @@ function mousePressed() {
 }
 
 function keyPressed() {
+  // Makes the up key a jump -- starting the jump functions through changing booleans
+  // and preventing more jumping until the next landing.
   if (keyCode === UP_ARROW && grounded === true) {
     jump = true;
     phase1 = true;
@@ -61,6 +66,7 @@ function keyPressed() {
 }
 
 function drawWorld() {
+  // Draws everything in the order 'background, boss, platforms, collectables, avatar, mobs'
   drawPlatforms();
   drawCollect();
   drawChar();
@@ -70,28 +76,36 @@ function drawWorld() {
 }
 
 function moveWorld() {
+  // Moves everything in the order 'Character, Enemies'
   charMove();
   for (var i = 0; i < pathed.length; i++) {
     pathed[i].movePathedEnemies();
   }
+  // Afterwards, does part of the boss attack animations
   if (prepareAttack) {
     bossAttack();
   }
 }
 
 function checkWorld() {
+  // Checks for the bosses existance, than runs it's timer
   if (boss) {
     bossAttackTimer();
     if (attacking) {
       bossAttackingTimer();
     }
   }
+  // Checks the avatar location to either land on a platform/ continue falling
   locationCheck();
+  // Check if the avatar can collect a collectable
   checkCollect();
+  // Checks gravity for the pathed Enemies
+  // Then, checks if the Mobs are killing the Avatar
   for (var i = 0; i < pathed.length; i++) {
     pathed[i].platformCheck();
     pathed[i].pathedLocationCheck();
   }
+  // Runs all the jump mechanics.
   if (jump) {
     charJump();
     charJumpTimer();

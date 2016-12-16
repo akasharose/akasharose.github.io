@@ -43,6 +43,7 @@ function colorShift() {
 }
 
 function checkButtons() {
+  // Checks for the start button/ restart button
   if (mouseX >= width / 2 - 200
   && mouseX <= width / 2 + 200
   && mouseY >= height / 2 - 80

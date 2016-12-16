@@ -19,7 +19,7 @@ var platDefaultGreen = 112;
 var platDefaultBlue = 108;
 var platAttackedGreen = 30;
 var platAttackedBlue = 15;
-
+// All Platforms need seperate colors to be able to change color seperately
 var platBotRed = platDefaultRed;
 var platBotGreen = platDefaultGreen;
 var platBotBlue = platDefaultBlue;
@@ -37,8 +37,10 @@ var platTopGreen = platDefaultGreen;
 var platTopBlue = platDefaultBlue;
 
 function drawPlatforms() {
+  // Draws the background
   rectMode(CORNER);
   image(backgroundBoss, 0, 0);
+  // Checks the boss state, draws accordingly
   if (boss) {
     bossBounce();
     if (angry) {
@@ -69,7 +71,7 @@ function drawPlatforms() {
   fill(platTopRed, platTopGreen, platTopBlue);
   rect(centX, centY2, centLength, platHeight);
 }
-
+// Resets all platforms to normal colors
 function resetPlatformColors() {
   platBotRed = platDefaultRed;
   platBotGreen = platDefaultGreen;

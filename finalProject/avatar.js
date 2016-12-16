@@ -6,6 +6,7 @@ var moving = false;
 var charLeft = false;
 
 function drawChar() {
+  // Chooses the character sprite to display
   if (grounded) {
     if (moving) {
       if (charLeft) {

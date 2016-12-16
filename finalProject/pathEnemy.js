@@ -80,6 +80,7 @@ PathedEnemy.prototype.pathedLocationCheck = function() {
 };
 
 PathedEnemy.prototype.playerCheck = function() {
+  // Checks if Player can be killed
   if (this.damage) {
     if (this.pathPosX + this.pathWidth >= charX && this.pathPosX <= charX + charWidth && this.pathPosY <= charY + charHeight && this.pathPosY + this.pathHeight >= charY) {
       failure = true;

@@ -17,12 +17,14 @@ function drawCollect() {
 }
 
 function drawScore() {
+  // Displays Score
   textSize(80);
-  fill(190, 60, 50);
+  fill(50, 60, 190);
   text(totalCollected, width / 2, 70)
 }
 
 function generateCollectLocation() {
+  // Places collectable -- has a do {} while () loop to ensure the collectables don't few in a few choice locations.
   getPosition();
   do {
     getPosition();
@@ -51,10 +53,12 @@ function checkCollect() {
 }
 
 function killEnemies() {
+  // Kills enemies when executed
   pathed.splice(0, 1);
 }
 
 function damageBoss() {
+  // Deals Damage to boss and Calls for Death after Health === 0
   bossHealth -= 1;
   if (bossHealth === 0) {
     boss = false;
